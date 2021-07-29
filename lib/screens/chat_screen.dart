@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class CharScreen extends StatefulWidget {
+class ChatScreen extends StatefulWidget {
   static const String id = 'chat_screen';
 
   @override
-  _CharScreenState createState() => _CharScreenState();
+  _ChatScreenState createState() => _ChatScreenState();
 }
 
-class _CharScreenState extends State<CharScreen> {
+class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Text(

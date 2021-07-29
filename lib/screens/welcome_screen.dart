@@ -1,3 +1,4 @@
+import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flash_chat/screens/login_screen.dart';
 import 'package:flash_chat/screens/registration_screen.dart';
 import 'package:flutter/material.dart';
@@ -45,7 +46,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
       backgroundColor: animation!.value,
       // backgroundColor: Colors.deepOrangeAccent.withOpacity(controller!.value),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.0),
+        padding: EdgeInsets.symmetric(horizontal: 20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -61,9 +62,14 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   ),
                 ),
                 // ignore: deprecated_member_use
-                TypewriterAnimatedTextKit(
-                  text: [' Flash Chat'],
+                TextLiquidFill(
+                  text: ' Flash Chat',
                   // ' ${controller!.value.toInt()}%',
+                  boxBackgroundColor: Colors.white,
+                  waveColor: Colors.blueGrey,
+                  boxHeight: 100,
+                  boxWidth: 230,
+                  
                   textStyle: TextStyle(
                       fontSize: 45,
                       fontWeight: FontWeight.w900,
@@ -71,36 +77,19 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                 ),
               ],
             ),
-            Padding(
-              padding: EdgeInsets.only(
-                top: 70,
-              ),
-              child: Material(
-                elevation: 5.0,
-                color: Colors.lightBlueAccent,
-                borderRadius: BorderRadius.circular(30),
-                child: MaterialButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, LoginScreen.id);
-                  },
-                  child: Text('Log In'),
-                ),
-              ),
+            RoundButton(
+                buttonName: 'Login',
+                bColor: Colors.blue[400],
+                onTapped: () {
+                  Navigator.pushNamed(context, LoginScreen.id);
+                }),
+            RoundButton(
+              buttonName: 'Register',
+              bColor: Colors.blue[600],
+              onTapped: () {
+                Navigator.pushNamed(context, RegistrationScreen.id);
+              },
             ),
-            Padding(
-              padding: EdgeInsets.symmetric(vertical: 25),
-              child: ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                    elevation: 5.0,
-                    primary: Colors.lightBlueAccent,
-                    shape: StadiumBorder(),
-                    padding: EdgeInsets.all(15.0)),
-                child: Text('Register'),
-                onPressed: () {
-                  Navigator.pushNamed(context, RegistrationScreen.id);
-                },
-              ),
-            )
           ],
         ),
       ),

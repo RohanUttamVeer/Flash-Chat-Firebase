@@ -1,4 +1,7 @@
+import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flutter/material.dart';
+
+import 'chat_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   static const String id = 'login_screen';
@@ -36,6 +39,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
               ),
             ),
+            RoundButton(
+                buttonName: 'Register',
+                bColor: Colors.blue[600],
+                onTapped: () {
+                  Navigator.pushNamed(context, ChatScreen.id);
+                })
           ],
         ),
       ),

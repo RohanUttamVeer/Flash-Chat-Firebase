@@ -1,3 +1,5 @@
+import 'package:flash_chat/components/rounded_button.dart';
+import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class RegistrationScreen extends StatefulWidget {
@@ -36,6 +38,12 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 ),
               ),
             ),
+            RoundButton(
+                buttonName: 'Register',
+                bColor: Colors.blue[600],
+                onTapped: () {
+                  Navigator.pushNamed(context, ChatScreen.id);
+                })
           ],
         ),
       ),
