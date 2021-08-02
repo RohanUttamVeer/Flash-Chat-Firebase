@@ -69,7 +69,8 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   waveColor: Colors.blueGrey,
                   boxHeight: 100,
                   boxWidth: 230,
-                  
+                  loadDuration: Duration(seconds: 11),
+                  waveDuration: Duration(seconds: 1),
                   textStyle: TextStyle(
                       fontSize: 45,
                       fontWeight: FontWeight.w900,

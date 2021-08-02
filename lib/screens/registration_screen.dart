@@ -1,4 +1,5 @@
 import 'package:flash_chat/components/rounded_button.dart';
+import 'package:flash_chat/constants.dart';
 import 'package:flash_chat/screens/chat_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -27,16 +28,18 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 child: Image.asset('assets/chat.png'),
               ),
             ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+              child: TextField(
+                onChanged: (value) {},
+                decoration:
+                    kTextFieldDecoration.copyWith(hintText: 'enter your email'),
+              ),
+            ),
             TextField(
               onChanged: (value) {},
-              decoration: InputDecoration(
-                hintText: 'enter your email',
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
-                ),
-              ),
+              decoration: kTextFieldDecoration.copyWith(
+                  hintText: 'enter your password'),
             ),
             RoundButton(
                 buttonName: 'Register',

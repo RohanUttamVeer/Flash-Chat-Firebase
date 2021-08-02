@@ -1,6 +1,7 @@
 import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flutter/material.dart';
 
+import '../constants.dart';
 import 'chat_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -28,20 +29,22 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Image.asset('assets/chat.png'),
               ),
             ),
-            TextField(
-              onChanged: (value) {},
-              decoration: InputDecoration(
-                hintText: 'enter your email',
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(32),
-                ),
+            Padding(
+              padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
+              child: TextField(
+                onChanged: (value) {},
+                decoration:
+                    kTextFieldDecoration.copyWith(hintText: 'enter your email'),
               ),
             ),
+            TextField(
+              onChanged: (value) {},
+              decoration: kTextFieldDecoration.copyWith(
+                  hintText: 'enter your password'),
+            ),
             RoundButton(
-                buttonName: 'Register',
-                bColor: Colors.blue[600],
+                buttonName: 'Log In',
+                bColor: Colors.blue[400],
                 onTapped: () {
                   Navigator.pushNamed(context, ChatScreen.id);
                 })
