@@ -11,6 +11,9 @@ class RegistrationScreen extends StatefulWidget {
 }
 
 class _RegistrationScreenState extends State<RegistrationScreen> {
+  String? email;
+  String? password;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,13 +34,17 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             Padding(
               padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
               child: TextField(
-                onChanged: (value) {},
+                onChanged: (value) {
+                  email = value;
+                },
                 decoration:
                     kTextFieldDecoration.copyWith(hintText: 'enter your email'),
               ),
             ),
             TextField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                password = value;
+              },
               decoration: kTextFieldDecoration.copyWith(
                   hintText: 'enter your password'),
             ),
@@ -46,6 +53,8 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                 bColor: Colors.blue[600],
                 onTapped: () {
                   Navigator.pushNamed(context, ChatScreen.id);
+                  print(email);
+                  print(password);
                 })
           ],
         ),
