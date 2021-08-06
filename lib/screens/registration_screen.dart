@@ -30,11 +30,13 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Hero(
-                tag: 'logo',
-                child: Container(
-                  height: 150,
-                  child: Image.asset('assets/chat.png'),
+              Flexible(
+                child: Hero(
+                  tag: 'logo',
+                  child: Container(
+                    height: 150,
+                    child: Image.asset('assets/chat.png'),
+                  ),
                 ),
               ),
               Padding(

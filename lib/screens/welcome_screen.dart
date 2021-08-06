@@ -20,7 +20,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: Duration(seconds: 4),
+      duration: Duration(seconds: 2),
       vsync: this,
       // upperBound: 60,
     );
@@ -68,7 +68,7 @@ class _WelcomeScreenState extends State<WelcomeScreen>
                   waveColor: Colors.blueGrey,
                   boxHeight: 100,
                   boxWidth: 230,
-                  loadDuration: Duration(seconds: 11),
+                  loadDuration: Duration(seconds: 5),
                   waveDuration: Duration(seconds: 1),
                   textStyle: TextStyle(
                       fontSize: 45,
